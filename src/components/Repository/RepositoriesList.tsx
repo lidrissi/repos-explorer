@@ -5,7 +5,7 @@ import RepositoryItem from './RepositoryItem/RepositoryItem';
 const RepositoriesList = (props: { repos: Repository[] }) => {
 
     return (
-        <div>
+        <div className="flex flex-col">
             {props.repos.map((repository: Repository) => <RepositoryItem {...repository} />)}
         </div>
     )

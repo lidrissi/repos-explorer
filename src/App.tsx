@@ -11,6 +11,12 @@ function App() {
         name: "lorem ipsum",
         issues: 4,
         stars: 5
+      },
+      {
+        description: "ipsum",
+        name: "lorem ipsum",
+        issues: 4,
+        stars: 5
       }
     ]}
     />
