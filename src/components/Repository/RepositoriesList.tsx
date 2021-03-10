@@ -1,14 +1,26 @@
-import React from 'react';
-import { Repository } from '../../store/types';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { fetchStarredRepositories } from '../../store/Repository/thunks';
 import RepositoryItem from './RepositoryItem/RepositoryItem';
 
-const RepositoriesList = (props: { repos: Repository[] }) => {
+const RepositoriesList = (props: any) => {
+
+    useEffect(() => {
+        props.fetchStarredRepositories();
+    })
 
     return (
         <div className="flex flex-col">
-            {props.repos.map((repository: Repository) => <RepositoryItem {...repository} />)}
+            {props.repositories.map((repository: Repository) => <RepositoryItem {...repository} />)}
         </div>
     )
 }
 
-export default RepositoriesList;
+const mapStateToProps = (state: any) => ({
+    repositories: state.repositories.starred
+})
+
+const mapDispatchToProps = (dispatch: any) => ({
+    fetchStarredRepositories: () => dispatch(fetchStarredRepositories())
+})
+export default connect(mapStateToProps, mapDispatchToProps)(RepositoriesList);

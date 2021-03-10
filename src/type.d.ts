@@ -1,4 +1,4 @@
-export type Repository = {
+type Repository = {
     name: string,
     description: string,
     issues: number,
@@ -6,7 +6,11 @@ export type Repository = {
     owner?: Owner
 }
 
-export type Owner = {
+type Owner = {
     username: string,
     avatar: string
+}
+
+type RepositoryState = {
+    starred: Repository[]
 }

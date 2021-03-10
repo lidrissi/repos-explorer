@@ -14,9 +14,12 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/react-redux": "^7.1.16",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
+    "assert": "^2.0.0",
     "autoprefixer": "^9.8.6",
+    "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.0",
     "babel-loader": "8.1.0",
@@ -60,7 +63,11 @@
     "react-app-polyfill": "^2.0.0",
     "react-dev-utils": "^11.0.2",
     "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
     "react-refresh": "^0.8.3",
+    "redux": "^4.0.5",
+    "redux-promise-middleware": "^6.1.2",
+    "redux-thunk": "^2.3.0",
     "resolve": "1.18.1",
     "resolve-url-loader": "^3.1.2",
     "sass-loader": "^10.0.5",
@@ -156,5 +163,9 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0"
   }
 }
