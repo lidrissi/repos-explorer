@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router } from "react-router-dom";
 import './App.css';
 import Menu from './components/Menu/Menu';
 import Layout from './components/Layout/Layout';
@@ -6,8 +7,10 @@ import Layout from './components/Layout/Layout';
 function App() {
   return (
     <div>
-      <Menu />
-      <Layout />
+      <Router>
+        <Menu />
+        <Layout />
+      </Router>
     </div>
   );
 }

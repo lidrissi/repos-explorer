@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchStarredRepositories } from '../../store/Repository/thunks';
 import RepositoryItem from './RepositoryItem/RepositoryItem';
 
-const RepositoriesList = (props: any) => {
+const Repositories = (props: any) => {
 
     useEffect(() => {
         props.fetchStarredRepositories();
@@ -23,4 +23,4 @@ const mapStateToProps = (state: any) => ({
 const mapDispatchToProps = (dispatch: any) => ({
     fetchStarredRepositories: () => dispatch(fetchStarredRepositories())
 })
-export default connect(mapStateToProps, mapDispatchToProps)(RepositoriesList);
+export default connect(mapStateToProps, mapDispatchToProps)(Repositories);

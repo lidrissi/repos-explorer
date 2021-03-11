@@ -1,9 +1,22 @@
 import React from 'react';
-import RepositoriesList from '../Repository/RepositoriesList';
+import { Switch, Route } from "react-router-dom";
+import Repositories from '../Repository/Repositories';
+import Topics from '../Topic/Topics';
+import Users from '../User/Users';
 
 const Layout = () => (
     <div className="sm:container mx-auto">
-        <RepositoriesList />
+        <Switch>
+            <Route path="/projects">
+                <Repositories />
+            </Route>
+            <Route path="/users">
+                <Users />
+            </Route>
+            <Route path="/topics">
+                <Topics />
+            </Route>
+        </Switch>
     </div>
 )
 
