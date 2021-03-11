@@ -14,7 +14,6 @@ const Menu = () => {
                         </div>
                         <div className="hidden sm:block sm:ml-6">
                             <div className="flex space-x-4">
-                                <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
                                 <MenuItem label="Projects" to="/projects" />
                                 <MenuItem label="Users" to="/users" />
                                 <MenuItem label="Topics" to="/topics" />

@@ -11,13 +11,13 @@ const Repositories = (props: any) => {
 
     return (
         <div className="flex flex-col">
-            {props.repositories.map((repository: Repository) => <RepositoryItem {...repository} />)}
+            {props.repositories.map((repository: Repository) => <RepositoryItem key={repository.id} {...repository} />)}
         </div>
     )
 }
 
 const mapStateToProps = (state: any) => ({
-    repositories: state.repositories.starred
+    repositories: state.repositories.list
 })
 
 const mapDispatchToProps = (dispatch: any) => ({

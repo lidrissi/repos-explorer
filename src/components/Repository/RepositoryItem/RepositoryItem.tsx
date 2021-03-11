@@ -1,4 +1,6 @@
 import React from 'react';
+import { format } from 'timeago.js';
+
 import { ReactComponent as IconStar } from 'assets/icons/star.svg';
 import { ReactComponent as IconIssue } from 'assets/icons/issue.svg';
 
@@ -23,7 +25,9 @@ const RepositoryItem = (props: Repository) => {
                         <IconIssue className="w-4 h-4 m-0.5" />
                         {props.issues}
                     </span>
-                    <span className="text-sm">Submitted 30 days ago by {props.owner?.username}</span>
+                    <span className="text-sm">
+                        Submitted {format(new Date(props.pushedAt))} by {props.owner?.username}
+                    </span>
                 </div>
             </div>
         </div>

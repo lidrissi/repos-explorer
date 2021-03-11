@@ -1,10 +1,10 @@
 import * as actionTypes from './actionTypes';
 
 const initialState: RepositoryState = {
-    starred: []
+    list: []
 };
 
-const starredReducer = (
+const repositoryReducer = (
     state: RepositoryState = initialState,
     action: any
 ): RepositoryState => {
@@ -12,10 +12,12 @@ const starredReducer = (
         case actionTypes.FETCH_STARRED_REPOSITORIES_FULFILLED:
             const { data: { items } } = action.payload;
             const newItems: Repository[] = items.map((item: { [key: string]: any }) => ({
+                id: item.id,
                 name: item.name,
                 description: item.description,
                 issues: item.open_issues_count,
                 stars: item.stargazers_count,
+                pushedAt: item.pushed_at,
                 owner: {
                     username: item.owner?.login,
                     avatar: item.owner?.avatar_url
@@ -23,11 +25,11 @@ const starredReducer = (
             }))
             console.log('payload ===', action);
             return {
-                starred: [...newItems]
+                list: [...newItems]
             };
 
     }
     return state
 }
 
-export default starredReducer;
+export default repositoryReducer;

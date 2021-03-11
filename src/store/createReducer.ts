@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
-import starredReducer from './Repository/reducer';
+import repositoryReducer from './Repository/reducer';
+import userReducer from './User/reducer';
 
 export const createReducer = () => {
   return combineReducers({
-    repositories: starredReducer
+    repositories: repositoryReducer,
+    users: userReducer
   })
 }
 

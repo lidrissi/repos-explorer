@@ -1,16 +1,22 @@
 type Repository = {
+    id: int,
     name: string,
     description: string,
     issues: number,
     stars: number
-    owner?: Owner
+    pushedAt: string,
+    owner?: User
 }
 
-type Owner = {
+type User = {
     username: string,
     avatar: string
 }
 
 type RepositoryState = {
-    starred: Repository[]
+    list: Repository[]
+}
+
+type UserState = {
+    items: User[]
 }
