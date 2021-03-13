@@ -14,9 +14,13 @@ type User = {
 }
 
 type RepositoryState = {
-    list: Repository[]
+    list: Repository[],
+    fetching: boolean,
+    page: number,
+    pageSize: number
 }
 
 type UserState = {
-    items: User[]
+    items: User[],
+    fetching: boolean
 }

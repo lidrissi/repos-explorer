@@ -1,7 +1,10 @@
+import { paginationInitialState } from '../Pagination/reducer';
 import * as actionTypes from './actionTypes';
 
 const initialState: UserState = {
-    items: []
+    items: [],
+    fetching: false,
+    ...paginationInitialState
 };
 
 const userReducer = (
@@ -16,6 +19,8 @@ const userReducer = (
                 avatar: avatar_url
             }));
             return {
+                ...state,
+                fetching: false,
                 items: [...newItems]
             };
 

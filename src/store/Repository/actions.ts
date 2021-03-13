@@ -1,6 +1,9 @@
-import { FETCH_STARRED_REPOSITORIES } from "./actionTypes";
+import { paginationActionsCreator } from "../Pagination/actions";
+import { FETCH_REPOSITORIES } from "./actionTypes";
 
-export const fetchStarredRepositories = (payload: any) => ({
-    type: FETCH_STARRED_REPOSITORIES,
+export const fetchRepositories = (payload: any) => ({
+    type: FETCH_REPOSITORIES,
     payload
 })
+
+export const [setRepositoriesPage, setRepositoriesPageSize] = paginationActionsCreator('REPOSITORIES');
