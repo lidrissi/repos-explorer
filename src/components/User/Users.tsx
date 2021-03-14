@@ -11,7 +11,7 @@ const Users = (props: any) => {
     })
 
     return (
-        <div className="grid grid-cols-5">
+        <div className="grid grid-cols-4">
             {
                 props.users.map((user: User) => <UserItem {...user} />)
             }

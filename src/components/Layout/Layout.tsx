@@ -6,7 +6,7 @@ import Topics from '../Topic/Topics';
 import Users from '../User/Users';
 
 const Layout = () => (
-    <div className="sm:container mx-auto">
+    <div className="sm:container mx-auto m-16">
         <Switch>
             <Route path="/projects">
                 <Repositories />
